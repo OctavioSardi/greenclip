@@ -32,7 +32,7 @@ class KeywordQueryEventListener(EventListener):
         filtered_data = [clip for clip in clipboard_data if query.lower() in clip.lower()]
         # Limit the number of items shown to 5 (or adjust as needed)
         # Limit the number of items shown to 5 (or adjust as needed)
-        for i, clip in enumerate(filtered_data[:10]):
+        for i, clip in enumerate(filtered_data[:200]):
             # Check if it's an image entry in the format "image/png <id>"
             if clip.startswith("image/png"):
                 image_id = re.search(pattern, clip).group()
